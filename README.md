@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/Blacklake-Tech/handwriting_ocr/actions/workflows/ci.yml/badge.svg)](https://github.com/Blacklake-Tech/handwriting_ocr/actions/workflows/ci.yml)
 
+基于讯飞云 API 的手写单据识别 demo app，同时使用了 streamlit 构建 UI 界面。
+
 Handwriting OCR using [Xfyun API](https://www.xfyun.cn/doc/words/wordRecg/API.html).
 
 ## Running locally
@@ -30,7 +32,15 @@ Running via poetry:
 poetry run streamlit run handwriting_ocr/src/handwriting_ocr.py
 ```
 
-## Formatting code using black
+## Developing
+
+If you have updated the dependencies, please run:
+
+```bash
+poetry lock
+```
+
+### Formatting code using black
 
 ```bash
 poetry run black .
