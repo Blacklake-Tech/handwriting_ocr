@@ -916,17 +916,6 @@ files = [
 ]
 
 [[package]]
-name = "pedantic"
-version = "1.14.6"
-description = "Some useful Python decorators for cleaner software development."
-optional = false
-python-versions = ">=3.7.0"
-files = [
-    {file = "pedantic-1.14.6-py3-none-any.whl", hash = "sha256:3b9a8409556c5cff898a0dcb3ee1093169db753126ad77f3f855dbeace8afbb1"},
-    {file = "pedantic-1.14.6.tar.gz", hash = "sha256:00359efc587023fe8c767f054eee6ae49cf6c618e230b897f49b34dc936e65c7"},
-]
-
-[[package]]
 name = "pillow"
 version = "9.5.0"
 description = "Python Imaging Library (Fork)"
@@ -1895,4 +1884,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "fae77d12270466264f03152de248f377f981469edd793e898dc515f0cd127182"
+content-hash = "70d2707f09ee7b14bf1b7102c7280d8fbc7efa7a5c317b805315b73a2ae6cf0e"
