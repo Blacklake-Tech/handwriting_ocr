@@ -26,7 +26,7 @@ APP_KEY=<app_key>
 EOF
 ```
 
-Running via poetry:
+Running via `poetry`:
 
 ```bash
 poetry run streamlit run handwriting_ocr/src/handwriting_ocr.py
@@ -40,8 +40,9 @@ If you have updated the dependencies, please run:
 poetry lock
 ```
 
-### Formatting code using black
+### Formatting code using `black` and `isort`
 
 ```bash
+poetry run isort . --profile black
 poetry run black .
 ```
