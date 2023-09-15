@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "handwriting-ocr"
+version = "0.0.1"
+description = "Handwriting recognition demo app"
+authors = ["Jiayu Liu <jiayu@blacklake.cn>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests5 = "^1.0.0"
+beartype = "^0.15.0"
+python-dotenv = "^1.0.0"
+streamlit = "^1.26.0"
+watchdog = "^3.0.0"
+pydantic = "^2.3.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest-black = "^0.3.12"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
