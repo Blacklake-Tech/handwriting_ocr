@@ -54,24 +54,6 @@ tests = ["attrs[tests-no-zope]", "zope-interface"]
 tests-no-zope = ["cloudpickle", "hypothesis", "mypy (>=1.1.1)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "pytest-xdist[psutil]"]
 
 [[package]]
-name = "beartype"
-version = "0.15.0"
-description = "Unbearably fast runtime type checking in pure Python."
-optional = false
-python-versions = ">=3.8.0"
-files = [
-    {file = "beartype-0.15.0-py3-none-any.whl", hash = "sha256:52cd2edea72fdd84e4e7f8011a9e3007bf0125c3d6d7219e937b9d8868169177"},
-    {file = "beartype-0.15.0.tar.gz", hash = "sha256:2af6a8d8a7267ccf7d271e1a3bd908afbc025d2a09aa51123567d7d7b37438df"},
-]
-
-[package.extras]
-all = ["typing-extensions (>=3.10.0.0)"]
-dev = ["autoapi (>=0.9.0)", "coverage (>=5.5)", "mypy (>=0.800)", "numpy", "pandera", "pydata-sphinx-theme (<=0.7.2)", "pytest (>=4.0.0)", "sphinx", "sphinx (>=4.2.0,<6.0.0)", "sphinxext-opengraph (>=0.7.5)", "tox (>=3.20.1)", "typing-extensions (>=3.10.0.0)"]
-doc-rtd = ["autoapi (>=0.9.0)", "pydata-sphinx-theme (<=0.7.2)", "sphinx (>=4.2.0,<6.0.0)", "sphinxext-opengraph (>=0.7.5)"]
-test-tox = ["mypy (>=0.800)", "numpy", "pandera", "pytest (>=4.0.0)", "sphinx", "typing-extensions (>=3.10.0.0)"]
-test-tox-coverage = ["coverage (>=5.5)"]
-
-[[package]]
 name = "black"
 version = "23.9.1"
 description = "The uncompromising code formatter."
@@ -1514,4 +1496,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "48adbc958c9775252fb97ef85342a70416b8c1a3cee2a0e8748237750567043d"
+content-hash = "66b9c222bca9e575e11c7b395b0aeb2503bd07302406f8c9f7c365da80c1bd15"
