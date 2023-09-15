@@ -1,0 +1,33 @@
+name: CI
+
+concurrency:
+  group: ${{ github.repository }}-${{ github.head_ref || github.sha }}-${{ github.workflow }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  ci:
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install poetry and project dependencies
+        run: |
+          python -m pip install -U pip
+          python -m pip install poetry==1.6.1
+          poetry install --no-root
+
+      - name: Run black via poetry
+        run: poetry run black . --check
+
+      - name: Run poetry build
+        run: poetry build
