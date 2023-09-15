@@ -26,7 +26,7 @@ jobs:
           python -m pip install poetry==1.6.1
 
       - name: Run black via poetry
-        run: poetry run black **/src/*.py
+        run: poetry run black . --check
 
       - name: Run poetry build
         run: poetry build
