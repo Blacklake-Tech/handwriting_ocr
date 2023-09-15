@@ -20,10 +20,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: install poetry
+      - name: Install poetry and project dependencies
         run: |
           python -m pip install -U pip
           python -m pip install poetry==1.6.1
+          poetry install --no-root
 
       - name: Run black via poetry
         run: poetry run black . --check
