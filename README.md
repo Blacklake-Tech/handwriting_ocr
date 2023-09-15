@@ -1,7 +1,8 @@
-# handwriting_ocr
+# 手写单据识别 handwriting_ocr
+
+[![CI](https://github.com/Blacklake-Tech/handwriting_ocr/actions/workflows/ci.yml/badge.svg)](https://github.com/Blacklake-Tech/handwriting_ocr/actions/workflows/ci.yml)
 
 Handwriting OCR using [Xfyun API](https://www.xfyun.cn/doc/words/wordRecg/API.html).
-
 
 ## Running locally
 
