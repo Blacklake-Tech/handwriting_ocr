@@ -29,6 +29,9 @@ EOF
 Running via `poetry`:
 
 ```bash
+# install dependencies
+poetry install --no-root
+# run the app
 poetry run streamlit run handwriting_ocr/src/handwriting_ocr.py
 ```
 

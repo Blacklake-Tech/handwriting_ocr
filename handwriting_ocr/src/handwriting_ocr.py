@@ -7,7 +7,6 @@ from typing import Optional, TypedDict
 
 import requests
 import streamlit as st
-from beartype import beartype
 from dotenv import load_dotenv
 from pydantic import BaseModel
 
@@ -18,11 +17,10 @@ APP_KEY: str = os.environ.get("APP_KEY")
 XFYUN_API_URL: str = "http://webapi.xfyun.cn/v1/service/v1/ocr/handwriting"
 
 
-@beartype
 def get_xfyun_request_header(
     language: str,
     location: str,
-    app_id,
+    app_id: str,
     app_key: str,
 ) -> dict[str, str]:
     """
@@ -45,42 +43,35 @@ def get_xfyun_request_header(
     return header
 
 
-@beartype
 class OcrWordInfo(BaseModel):
     content: str
 
 
-@beartype
 class PointInfo(BaseModel):
     x: int
     y: int
 
 
-@beartype
 class LocationInfo(BaseModel):
     top_left: PointInfo
     right_bottom: PointInfo
 
 
-@beartype
 class OcrLineInfo(BaseModel):
     word: list[OcrWordInfo]
     location: Optional[LocationInfo]
     confidence: float
 
 
-@beartype
 class OcrBlockInfo(BaseModel):
     type: str
     line: list[OcrLineInfo]
 
 
-@beartype
 class OcrData(BaseModel):
     block: list[OcrBlockInfo]
 
 
-@beartype
 class OcrResult(BaseModel):
     code: str
     data: OcrData
@@ -88,7 +79,6 @@ class OcrResult(BaseModel):
     sid: str
 
 
-@beartype
 def handwriting_ocr():
     if APP_ID is None or APP_KEY is None:
         st.warning("请先配置讯飞的APP_ID和APP_KEY")
