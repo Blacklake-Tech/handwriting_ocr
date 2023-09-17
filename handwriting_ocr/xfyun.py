@@ -3,7 +3,6 @@ import hashlib
 import json
 import os
 import time
-from io import BytesIO
 from typing import Optional
 
 import requests
@@ -14,11 +13,11 @@ URL: str = "http://webapi.xfyun.cn/v1/service/v1/ocr/handwriting"
 
 
 def xfyun_ocr():
-    app_id: str = os.environ.get("APP_ID")
-    app_key: str = os.environ.get("APP_KEY")
+    app_id: str = os.environ.get("XF_APP_ID")
+    app_key: str = os.environ.get("XF_APP_KEY")
 
     if app_id is None or app_key is None:
-        st.warning("请先配置讯飞的APP_ID和APP_KEY")
+        st.warning("请先配置讯飞的XF_APP_ID和XF_APP_KEY")
         return
 
     lang_type = st.radio("语言类型", ["只有英文", "中英混合"], index=1)
@@ -103,7 +102,7 @@ class LocationInfo(BaseModel):
 
 class OcrLineInfo(BaseModel):
     word: list[OcrWordInfo]
-    location: Optional[LocationInfo]
+    location: Optional[LocationInfo] = None
     confidence: float
 
 
