@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "handwriting-ocr"
+name = "handwriting_ocr"
 version = "0.0.1"
 description = "Handwriting recognition demo app"
 authors = ["Jiayu Liu <jiayu@blacklake.cn>"]
