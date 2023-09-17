@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "handwriting-ocr"
+name = "handwriting_ocr"
 version = "0.0.1"
 description = "Handwriting recognition demo app"
 authors = ["Jiayu Liu <jiayu@blacklake.cn>"]
@@ -13,6 +13,9 @@ python-dotenv = "^1.0.0"
 streamlit = "^1.26.0"
 watchdog = "^3.0.0"
 pydantic = "^2.3.0"
+
+# [tool.poetry.scripts]
+# serve = ":main"
 
 [tool.poetry.group.dev.dependencies]
 pytest-black = "^0.3.12"
