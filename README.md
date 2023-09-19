@@ -41,6 +41,13 @@ poetry install --no-root
 poetry run streamlit run handwriting_ocr/app.py
 ```
 
+Running via docker:
+
+```bash
+docker build -t handwriting_ocr .
+docker run -p 8501:8501 -v $(pwd)/.env:/app/.env handwriting_ocr
+```
+
 ## Developing
 
 If you have updated the dependencies, please run:
