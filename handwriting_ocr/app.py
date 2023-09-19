@@ -1,8 +1,7 @@
 import streamlit as st
+from baidu import baidu_ocr
 from dotenv import load_dotenv
-
-from handwriting_ocr.baidu import baidu_ocr
-from handwriting_ocr.xfyun import xfyun_ocr
+from xfyun import xfyun_ocr
 
 load_dotenv()
 
