@@ -14,7 +14,7 @@ WORKDIR /app
 
 COPY poetry.lock pyproject.toml ./
 
-RUN poetry export -o requirements.txt
+RUN poetry export -o requirements.txt --without=dev
 
 FROM python:3.10-slim as runtime
 

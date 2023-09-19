@@ -1,7 +1,6 @@
 import streamlit as st
-from dotenv import load_dotenv
-
 from baidu import baidu_ocr
+from dotenv import load_dotenv
 from xfyun import xfyun_ocr
 
 load_dotenv()
