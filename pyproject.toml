@@ -12,7 +12,7 @@ requests = "^2.31.0"
 python-dotenv = "^1.0.0"
 streamlit = "^1.27.1"
 watchdog = "^3.0.0"
-pydantic = "^2.3.0"
+pydantic = "^2.4.2"
 
 [tool.poetry.group.dev.dependencies]
 pytest-black = "^0.3.12"
